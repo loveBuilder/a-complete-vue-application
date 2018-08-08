@@ -1,0 +1,134 @@
+$border-color: #b2b2b2;
+$color-normal: #31cc34;
+$color-timeout: #e03636;
+
+.root {
+  background: #f7f7f7;
+
+  .icon-colorbar-normal {
+    background: $color-normal;
+  }
+  .icon-colorbar-timeout {
+    background: $color-timeout;
+  }
+
+  .header-box {
+    height: 80px;
+    padding: 20px 30px;
+    border-bottom: 1px solid;
+    border-color: $border-color;
+    background: #fff;
+    overflow: hidden;
+
+    .icons-bar {
+      float: right;
+
+      .icons-bar-node {
+        height: 40px;
+        line-height: 40px;
+        display: inline-block;
+        margin-left: 30px;
+
+        .icon-colorbar {
+          display: inline-block;
+          width: 8px;
+          height: 100%;
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .center-box {
+    padding: 20px 30px;
+    overflow: auto;
+
+    .center {
+      border: 1px solid $border-color;
+
+      .col-borderR {
+        border-right: 1px solid $border-color;
+        height: 100%;
+
+        .empty {
+          line-height: 100px;
+          text-align: center;
+          color: #999;
+        }
+      }
+
+      .title-bar {
+        height: 50px;
+        background: #d9d9d9;
+        border-bottom: 1px solid $border-color;
+
+        .title-name {
+          line-height: 50px;
+          text-align: center;
+        }
+      }
+
+      .story-bar {
+        border-bottom: 1px solid $border-color;
+      }
+
+      .story-box {
+        margin: 20px 10px;
+        height: 124px;
+        background: #fff;
+
+        .icon-colorbar {
+          float: left;
+          width: 10px;
+          height: 100%;
+        }
+
+        .context-box {
+          height: 100%;
+          margin-left: 10px;
+          padding: 0 10px;
+          border: 1px solid $border-color;
+          border-left: none;
+
+          .context-header {
+            padding: 10px 0;
+
+            span.needid {
+              font-weight: bold;
+              padding-right: 5px;
+            }
+            span.personal {
+              float: right;
+              width: 70%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              text-align: right;
+            }
+          }
+          .context-center {
+            min-height: 48px;
+            line-height: 24px;
+          }
+          .context-footer {
+            padding-top: 8px;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            span {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .title-bar .col-borderR:last-of-type,
+      .story-bar .col-borderR:last-of-type,
+      .nonstory-bar .col-borderR:last-of-type {
+        border: none;
+      }
+    }
+  }
+}
